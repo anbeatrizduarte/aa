@@ -1,12 +1,14 @@
 
 /* Botão modo dark */
 var bttModeDark = document.getElementById("bttDarkMode")
+var bttDarkModeSide = document.getElementById("bttDarkMode-side")
 
 function modeDark() {
     document.body.classList.toggle('dark')
 }
 
 bttModeDark.addEventListener('click', modeDark, false)
+bttDarkModeSide.addEventListener('click', modeDark, false)
 
 /* Deslize das imagens principais */
 
@@ -27,59 +29,61 @@ window.addEventListener('scroll', () => {
 /* Barra lateral */
 
 const navSide = document.getElementById("nav-side")
-var showBttNav = document.getElementsByClassName("bttNav-side")
-var arrsBttNS = [showBttNav[0], showBttNav[1]]
+var bttNav = Array.from(document.getElementsByClassName('bttNav-side'))
+const arrImgZI = Array.from(document.getElementsByClassName('cImgZI'))
+var prodBox = document.getElementById("product-box")
 
-window.addEventListener('scroll', () => {   
-    arrsBttNS[0].style.right = '0'
-    arrsBttNS[0].style.transition = '0.7s'
-    arrsBttNS[1].style.right = '0'
-    arrsBttNS[1].style.transition = '0.7s'   
-})
 
-showBttNav[1].onclick = () => {
-    var remFavH = document.getElementById("favh4")
-    var remFavH2 = document.getElementById("favh8")
-    var remSac = document.getElementById("sac4")
-    var remSac2 = document.getElementById("sac8")
-    navSide.classList.toggle("navside-active")
-    remFavH.style.zIndex = '-1'
-    remFavH2.style.zIndex = '-1'
-    remSac.style.zIndex = '-1'
-    remSac2.style.zIndex = '-1'
+function abrirNavSide() {
+    if (bttNav[0].style.background !== 'white') {
+        bttNav[0].classList.toggle('bttNav-size-act');
+        bttNav[1].classList.toggle('bttNav-size-act');
+        navSide.classList.toggle('navside-active')
+        bttDarkModeSide.classList.toggle("bttDarkMode-side-act")
+        for (i = 0, letarr = arrImgZI.length; i < letarr; i++) {
+            arrImgZI[i].style.zIndex = '-1'
+        }
+    }
+}
+
+for (i = 0, len = bttNav.length; i < len; i++) {
+    bttNav[i].onclick = abrirNavSide;
 }
 
 /* Botões de favoritar e adicionar ao carrinho */
 
-var favheart = document.getElementsByClassName("favheart");
+/* var favheart = document.getElementsByClassName("favheart");
 var favheartAct = document.getElementsByClassName("heart-act")
-var sac = document.getElementsByClassName("sac-icon")
+var sac = document.getElementsByClassName("sac-icon") */
 
-var arrHeart = [favheartAct[0], favheartAct[1], favheartAct[2], favheartAct[3], favheartAct[4], favheartAct[5], favheartAct[6], favheartAct[7]]
+const favheart = Array.from(document.getElementsByClassName("favheart"))
+const favheartAct = Array.from(document.getElementsByClassName("heart-act"))
+const sac = Array.from(document.getElementsByClassName("sac-icon"))
+
 
 function fav() {
-    arrHeart[0].classList.toggle('heartAct');
+    favheartAct[0].classList.toggle('heartAct');
 }
 function fav1() {
-    arrHeart[1].classList.toggle('heartAct');
+    favheartAct[1].classList.toggle('heartAct');
 }
 function fav2() {
-    arrHeart[2].classList.toggle('heartAct');
+    favheartAct[2].classList.toggle('heartAct');
 }
 function fav3() {
-    arrHeart[3].classList.toggle('heartAct');
+    favheartAct[3].classList.toggle('heartAct');
 }
 function fav4() {
-    arrHeart[4].classList.toggle('heartAct');
+    favheartAct[4].classList.toggle('heartAct');
 }
 function fav5() {
-    arrHeart[5].classList.toggle('heartAct');
+    favheartAct[5].classList.toggle('heartAct');
 }
 function fav6() {
-    arrHeart[6].classList.toggle('heartAct');
+    favheartAct[6].classList.toggle('heartAct');
 }
 function fav7() {
-    arrHeart[7].classList.toggle('heartAct');
+    favheartAct[7].classList.toggle('heartAct');
 }
 
 favheart[0].addEventListener('click', fav, false);

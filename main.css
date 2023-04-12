@@ -29,8 +29,11 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+    background-color: white;
     overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 ul {
@@ -38,9 +41,10 @@ ul {
     text-align: center;
     padding: 0px 40px;
 }
+
 li a {
     text-decoration: none;
-    text-transform: uppercase;   
+    text-transform: uppercase;
     padding: 0px 40px;
 }
 
@@ -54,13 +58,16 @@ li a {
 main {
     background-image: url(./src/img/bg-wave.png);
     background-repeat: no-repeat;
-    height: 100vh;
+    /* background-size: 100vw 100vh; */
+    background-position: right;
+    height: 105.2vh;
+
 }
 
 .navmain {
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
+    margin: 0 50px;
     padding-top: 20px;
 }
 
@@ -69,10 +76,11 @@ main {
     cursor: pointer;
     transition: 0.8s;
     padding: 0 5px;
-    
+
 }
 
-.navimgs:hover, .menulink:hover {
+.navimgs:hover,
+.menulink:hover {
     transform: scale(1.1);
     padding: 0px 15px;
 }
@@ -96,22 +104,28 @@ main {
     color: var(--main-color);
 }
 
+/* Barra lateral */
+
 .nav-side {
     background: var(--text-color);
     position: fixed;
     top: 100;
-    right: -100%;
     width: 300px;
     height: 150%;
     color: var(--bg-color);
-    float: right;
-    z-index: 1;
+    right: -100%;
+}
+
+.menulink-side {
+    margin-top: 30px;
 }
 
 .menulink-side a {
     color: var(--bg-color);
     position: relative;
     text-align: left;
+    top: 100px;
+    font-size: 25px;
 }
 
 .nav-side.navside-active {
@@ -119,23 +133,40 @@ main {
     position: absolute;
 }
 
-#bttNav-side1, #bttNav-side2  {
+.bttNav-side {
     height: 80px;
     position: absolute;
-    top: 101%;
+    top: 104%;
+    right: 0;
     padding-right: 32px;
-    right: -100%; 
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 #bttNav-side2 {
-    top: 103%;
+    top: 106%;
 }
 
-.bttNav-side.bttNav-size-act {
-    filter: brightness(100);
+#bttNav-side1.bttNav-size-act,
+#bttNav-side2.bttNav-size-act {
     z-index: 1;
+    right: 0;
     position: absolute;
+    filter: brightness(100);
+}
+
+#bttDarkMode-side {
+    visibility: hidden;
+}
+
+#bttDarkMode-side.bttDarkMode-side-act {
+    position: relative;
+    right: 130px;
+    top: 17rem;
+    float: right;
+    z-index: 2;
+    filter: brightness(100);
+    height: 50px;
+    visibility: visible;
 }
 
 /* Seção principal */
@@ -146,6 +177,7 @@ main {
 }
 
 .secmain {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -178,7 +210,7 @@ main {
     text-transform: uppercase;
     border-radius: 30px;
     border: 1px solid var(--text-color);
-    text-align: center; 
+    text-align: center;
     padding-bottom: 3px;
     font-size: 17px;
     transition: 0.5s;
@@ -212,7 +244,7 @@ main {
     bottom: auto;
 }
 
-.imgscmedia { 
+.imgscmedia {
     position: relative;
     height: 22px;
     cursor: pointer;
@@ -241,7 +273,7 @@ main {
     position: relative;
     text-align: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.2rem;
 }
 
 .imgsprod {
@@ -290,6 +322,12 @@ main {
     z-index: 1;
 }
 
+.cImgZI.act {
+    /* position: relative;
+    z-index: -1; */
+    z-index: -1;
+}
+
 /* Modo dark */
 
 body.dark {
@@ -301,7 +339,9 @@ body.dark .menulink a {
     color: var(--bg-color);
 }
 
-body.dark .navicon, body.dark .imgscmedia {
+body.dark .navicon,
+body.dark .imgscmedia,
+body.dark .bttNav-side {
     filter: brightness(100);
 }
 
@@ -313,13 +353,17 @@ body.dark #bttSP {
     border: 1px solid var(--bg-color);
     color: var(--bg-color);
 }
+
 body.dark #bttSP:hover {
     background: var(--bg-color);
     color: var(--text-color);
 }
+
 body.dark .options {
     background: var(--thir-color);
 }
 
-
-
+body.dark .nav-side {
+    background: var(--thir-color);
+    box-shadow: -5px 0px 5px 0px #000000b0;
+}
