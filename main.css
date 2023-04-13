@@ -116,8 +116,13 @@ main {
     right: -100%;
 }
 
+.ulmenu {
+    position: sticky;
+    top: 10%;
+}
+
 .menulink-side {
-    margin-top: 30px;
+    margin-top: 30px; 
 }
 
 .menulink-side a {
@@ -154,8 +159,35 @@ main {
     filter: brightness(100);
 }
 
+
+#bttNav-side2.fixar {
+    top: 2.3%;
+}
+
+.fixar {
+    position: fixed;
+    z-index: 99;
+    top: 1%;
+    height: 50px;
+    right: -1%;
+    transition: top 0.3s ease-in-out;
+    filter: drop-shadow(5px 3px 2.5px rgba(0, 0, 0, 0.24));
+}
+
+.teste {
+    margin-top: 50%;
+    position: relative;
+}
+
+.fixarDark {
+    position: relative;
+    z-index: 1;
+}
+
 #bttDarkMode-side {
     visibility: hidden;
+    transition: 0.7s;
+    position: relative;
 }
 
 #bttDarkMode-side.bttDarkMode-side-act {
@@ -273,7 +305,7 @@ main {
     position: relative;
     text-align: center;
     justify-content: center;
-    gap: 2.2rem;
+    gap: 1rem;
 }
 
 .imgsprod {
@@ -367,3 +399,9 @@ body.dark .nav-side {
     background: var(--thir-color);
     box-shadow: -5px 0px 5px 0px #000000b0;
 }
+
+
+
+
+
+

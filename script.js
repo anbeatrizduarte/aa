@@ -50,11 +50,35 @@ for (i = 0, len = bttNav.length; i < len; i++) {
     bttNav[i].onclick = abrirNavSide;
 }
 
-/* Botões de favoritar e adicionar ao carrinho */
+/* Menu lateral fixo */
 
-/* var favheart = document.getElementsByClassName("favheart");
-var favheartAct = document.getElementsByClassName("heart-act")
-var sac = document.getElementsByClassName("sac-icon") */
+$(function () {
+    var nav = $('.bttNav-side');
+    var menuLinkSide = Array.from(document.getElementsByClassName('ulmenu'))
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 600 && $(this).scrollTop() < 650) {
+            nav.addClass("fixar");
+            bttDarkModeSide.style.top = '400px'
+            bttDarkModeSide.style.transition = '0.2s' 
+        } else if ($(this).scrollTop() >= 650) {
+            bttDarkModeSide.style.top = '700px'
+        }
+        else {
+            nav.removeClass("fixar");
+            menuLinkSide.removeClass("teste")
+        }
+    });
+});
+
+/* document.addEventListener('scroll', function() {
+    if (offsetMenu <= window.scrollY()) {
+        bttNav.classList.add('fixar')
+    } else {
+        bttNav.classList.remove('fixar')
+    }
+}) */
+
+/* Botões de favoritar e adicionar ao carrinho */
 
 const favheart = Array.from(document.getElementsByClassName("favheart"))
 const favheartAct = Array.from(document.getElementsByClassName("heart-act"))
@@ -98,8 +122,5 @@ favheart[7].addEventListener('click', fav7, false);
 function noProd() {
     window.alert("[ERRO] Este produto não está disponível por enquanto");
 }
-
-
-
 
 
