@@ -40,9 +40,6 @@ function abrirNavSide() {
         bttNav[1].classList.toggle('bttNav-size-act');
         navSide.classList.toggle('navside-active')
         bttDarkModeSide.classList.toggle("bttDarkMode-side-act")
-        for (i = 0, letarr = arrImgZI.length; i < letarr; i++) {
-            arrImgZI[i].style.zIndex = '-1'
-        }
     }
 }
 
@@ -56,16 +53,11 @@ $(function () {
     var nav = $('.bttNav-side');
     var menuLinkSide = Array.from(document.getElementsByClassName('ulmenu'))
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 600 && $(this).scrollTop() < 650) {
+        if ($(this).scrollTop() > 600) {
             nav.addClass("fixar");
-            bttDarkModeSide.style.top = '400px'
-            bttDarkModeSide.style.transition = '0.2s' 
-        } else if ($(this).scrollTop() >= 650) {
-            bttDarkModeSide.style.top = '700px'
         }
         else {
             nav.removeClass("fixar");
-            menuLinkSide.removeClass("teste")
         }
     });
 });

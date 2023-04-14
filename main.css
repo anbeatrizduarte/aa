@@ -60,8 +60,8 @@ main {
     background-repeat: no-repeat;
     /* background-size: 100vw 100vh; */
     background-position: right;
+    
     height: 100vh;
-    z-index: -1;
 }
 
 .navmain {
@@ -110,6 +110,7 @@ main {
     background: var(--text-color);
     position: fixed;
     top: 100;
+    margin-top: 33px;
     width: 300px;
     height: 150%;
     color: var(--bg-color);
@@ -134,8 +135,9 @@ main {
 }
 
 .nav-side.navside-active {
-    right: 0;
+    right: -18px;
     position: absolute;
+    z-index: 3;
 }
 
 .bttNav-side {
@@ -153,7 +155,7 @@ main {
 
 #bttNav-side1.bttNav-size-act,
 #bttNav-side2.bttNav-size-act {
-    z-index: 1;
+    z-index: 4;
     right: 0;
     position: absolute;
     filter: brightness(100);
@@ -167,11 +169,11 @@ main {
 .fixar {
     position: fixed;
     z-index: 99;
-    top: 2%;
-    height: 50px;
-    right: -1%;
+    top: 1%;
+    height: 70px;
+    right: 0;
     transition: top 0.3s ease-in-out;
-    filter: drop-shadow(5px 3px 2.5px rgba(0, 0, 0, 0.24));
+    filter: drop-shadow(0px 0px 5px var(--bg-color));
 }
 
 .teste {
@@ -187,14 +189,16 @@ main {
 #bttDarkMode-side {
     visibility: hidden;
     transition: 0.7s;
+    margin-left: 120px;
+    margin-top: 50%;
     position: relative;
 }
 
 #bttDarkMode-side.bttDarkMode-side-act {
-    position: relative;
-    right: 130px;
-    top: 17rem;
-    float: right;
+    position: sticky;
+    /* right: 130px;
+    float: right; */
+    top: 20rem;
     z-index: 2;
     filter: brightness(100);
     height: 50px;
@@ -305,7 +309,17 @@ main {
     position: relative;
     text-align: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2.5rem;
+}
+
+.product-box {
+    margin-top: 10px;
+    transition: all 0.2s linear;
+}
+.product-box:hover {
+    padding-top: 10px;
+    border: 0.5px solid black;
+    background: url(./src/img/bg-prod.png);
 }
 
 .imgsprod {
