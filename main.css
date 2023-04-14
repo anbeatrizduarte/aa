@@ -61,6 +61,7 @@ main {
     /* background-size: 100vw 100vh; */
     background-position: right;
     height: 90vh;
+    z-Index: -1;
 
 }
 
