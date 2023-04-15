@@ -52,6 +52,7 @@ for (i = 0, len = bttNav.length; i < len; i++) {
 $(function () {
     var nav = $('.bttNav-side');
     var menuLinkSide = Array.from(document.getElementsByClassName('ulmenu'))
+    var iconCart = document.getElementById("icon-cart")
     $(window).scroll(function () {
         if ($(this).scrollTop() > 600) {
             nav.addClass("fixar");

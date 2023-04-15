@@ -58,9 +58,7 @@ li a {
 main {
     background-image: url(./src/img/bg-wave.png);
     background-repeat: no-repeat;
-    /* background-size: 100vw 100vh; */
     background-position: right;
-    
     height: 100vh;
 }
 
@@ -107,7 +105,7 @@ main {
 /* Barra lateral */
 
 .nav-side {
-    background: var(--text-color);
+    background-color: var(--text-color);
     position: fixed;
     top: 100;
     margin-top: 33px;
@@ -123,7 +121,7 @@ main {
 }
 
 .menulink-side {
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 .menulink-side a {
@@ -174,11 +172,6 @@ main {
     right: 0;
     transition: top 0.3s ease-in-out;
     filter: drop-shadow(0px 0px 5px var(--bg-color));
-}
-
-.teste {
-    margin-top: 50%;
-    position: relative;
 }
 
 .fixarDark {
@@ -272,15 +265,17 @@ main {
 
 .scmedia {
     position: relative;
-    top: 510px;
+    top: 490px;
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 100px;
     bottom: auto;
+    padding-left: 100px;
 }
 
 .imgscmedia {
+    
     position: relative;
     height: 22px;
     cursor: pointer;
@@ -290,7 +285,7 @@ main {
 /* Shop Products */
 .secShopProd {
     width: 100vw;
-    height: calc(100vh - 182px);
+    height: 1000px;
 }
 
 .tith1 {
@@ -309,13 +304,15 @@ main {
     position: relative;
     text-align: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1rem;
+    margin: 20px;
 }
 
 .product-box {
     margin-top: 10px;
     transition: all 0.2s linear;
 }
+
 .product-box:hover {
     padding-top: 10px;
     border: 0.5px solid black;
@@ -369,8 +366,6 @@ main {
 }
 
 .cImgZI.act {
-    /* position: relative;
-    z-index: -1; */
     z-index: -1;
 }
 
@@ -413,9 +408,3 @@ body.dark .nav-side {
     background: var(--thir-color);
     box-shadow: -5px 0px 5px 0px #000000b0;
 }
-
-
-
-
-
-

@@ -1,0 +1,149 @@
+@media screen and (max-width: 768px) {
+
+    /* main */
+
+    main {
+        height: 60vh;
+    }
+
+    #bg1 {
+        height: 200px;
+        position: absolute;
+        top: 280px;
+    }
+
+    #bg2 {
+        height: 260px;
+        position: relative;
+        top: 146px;
+    }
+
+    .contmain {
+        height: 50vh;
+    }
+
+    .secmain {
+        width: 70vw;
+        height: 53vh;
+        background: url(./src/img/bg-wave.png);
+        background-position-x: 250px;
+    }
+
+    .textsmain {
+        padding-top: 0;
+        padding-right: 0;
+    }
+
+    #secmainh1 {
+        font-size: 55px;
+        position: absolute;
+        right: 41%;
+        margin-top: 20%;
+        z-index: 1;
+    }
+
+    .textsmain p {
+        font-size: 8px;
+        position: absolute;
+        right: 47%;
+        margin-top: 10%;
+    }
+
+    /* side nav */
+
+    .bttNav-side {
+        height: 40px;
+        position: fixed;
+        top: 0;
+        right: 32%;
+    }
+
+    #bttNav-side2 {
+        top: 8px;
+    }
+
+    .nav-side {
+        position: fixed;
+        top: 0;
+        width: 250px;
+        height: 350%;
+    }
+
+    .nav-side.navside-active {
+        right: 140px;
+    }
+
+    #bttNav-side1.bttNav-size-act,
+    #bttNav-side2.bttNav-size-act {
+        z-index: 4;
+        top: 5%;
+        right: 32%;
+    }
+
+    #bttNav-side2.bttNav-size-act {
+        top: 47px;
+    }
+
+    .fixar {
+        top: 1.5%;
+        height: 30px;
+        right: 32%;
+    }
+
+    /* products */
+
+    .products {
+        height: 90px;
+        width: 50px;
+    }
+
+    .options {
+        height: 20px;
+        width: 50px;
+        right: 13px;
+        bottom: 10px;
+    }
+
+    .img-opts,
+    .text1 {
+        bottom: 8px;
+        height: 15px;
+    }
+
+    .img-opts1 {
+        height: 15px;
+        bottom: 18px;
+        padding-right: 92px;
+    }
+
+    .imgsprod {
+        height: 150px;
+    }
+
+    .product-box {
+        height: 230px;
+        width: 180px;
+        margin-left: 40%;
+    }
+
+    .tith1 {
+        font-size: 30px;
+        margin-right: 40%;
+    }
+
+
+    .prodh2,
+    .price {
+        font-size: 13px;
+    }
+
+
+
+    .navimgs,
+    .menulink,
+    #bttSP,
+    .scmedia {
+        display: none;
+    }
+
+}
