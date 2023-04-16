@@ -6,7 +6,7 @@
         width: 100vw;
         height: 98.5vh;
         background: url(./src/img/bg-wave.png);
-        background-position-x: 359px;
+        background-position-x: 420px;
     }
 
     #bg1 {
@@ -18,11 +18,11 @@
     #bg2 {
         height: 384px;
         position: relative;
-        top: 146px;
+        top: 175px;
     }
 
     .secmain {
-        height: 83vh;
+        height: 83.6vh;
     }
 
     .textsmain {
@@ -33,14 +33,14 @@
     #secmainh1 {
         font-size: 80px;
         position: absolute;
-        right: 10%;
+        right: 20%;
         margin-top: 5%;
     }
 
     .textsmain p {
         font-size: 12px;
         position: absolute;
-        right: 18%;
+        right: 27%;
     }
 
     /* side nav */
@@ -87,11 +87,16 @@
 
     /* products */
 
+
+    .secShopProd {
+        width: 50vw;
+    }
     .products {
-        height: 90px;
-        width: 50px;
+        top: 8%;
         display: grid;
-        grid-template-columns: repeat(2, minmax(150px, auto));
+        position: relative;
+        left: 10%;
+        grid-template-columns: repeat(2, minmax(180px, auto));
     }
 
     .options {
@@ -125,8 +130,7 @@
 
     .tith1 {
         font-size: 40px;
-        position: relative;
-        top: 5%;
+        margin-left: 50%;
     }
 
 
