@@ -2,27 +2,23 @@
 
     /* main */
 
-    main{
+    main {
         width: 100vw;
-        height: 85vh;
+        height: 98.5vh;
         background: url(./src/img/bg-wave.png);
-        background-position-x: 355px;
+        background-position-x: 359px;
     }
 
     #bg1 {
-        height: 200px;
+        height: 250px;
         position: absolute;
         top: 280px;
     }
 
     #bg2 {
-        height: 260px;
+        height: 384px;
         position: relative;
         top: 146px;
-    }
-
-    .contmain {
-        height: 100vh;
     }
 
     .secmain {
@@ -35,18 +31,16 @@
     }
 
     #secmainh1 {
-        font-size: 55px;
+        font-size: 80px;
         position: absolute;
-        right: 41%;
-        margin-top: 20%;
-        z-index: 1;
+        right: 10%;
+        margin-top: 5%;
     }
 
     .textsmain p {
-        font-size: 8px;
+        font-size: 12px;
         position: absolute;
-        right: 47%;
-        margin-top: 10%;
+        right: 18%;
     }
 
     /* side nav */
@@ -54,12 +48,13 @@
     .bttNav-side {
         height: 40px;
         position: fixed;
-        top: 0;
-        right: 32%;
+        top: 10px;
+        right: 0;
+        z-index: 1;
     }
 
     #bttNav-side2 {
-        top: 8px;
+        top: 17px;
     }
 
     .nav-side {
@@ -95,6 +90,8 @@
     .products {
         height: 90px;
         width: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, auto));
     }
 
     .options {
@@ -127,8 +124,9 @@
     }
 
     .tith1 {
-        font-size: 30px;
-        margin-right: 40%;
+        font-size: 40px;
+        position: relative;
+        top: 5%;
     }
 
 
@@ -136,8 +134,6 @@
     .price {
         font-size: 13px;
     }
-
-
 
     .navimgs,
     .menulink,
