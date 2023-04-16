@@ -2,8 +2,11 @@
 
     /* main */
 
-    main {
-        height: 60vh;
+    main{
+        width: 100vw;
+        height: 85vh;
+        background: url(./src/img/bg-wave.png);
+        background-position-x: 355px;
     }
 
     #bg1 {
@@ -19,14 +22,11 @@
     }
 
     .contmain {
-        height: 50vh;
+        height: 100vh;
     }
 
     .secmain {
-        width: 70vw;
-        height: 53vh;
-        background: url(./src/img/bg-wave.png);
-        background-position-x: 250px;
+        height: 83vh;
     }
 
     .textsmain {

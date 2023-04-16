@@ -12,7 +12,7 @@ bttDarkModeSide.addEventListener('click', modeDark, false)
 
 /* Deslize das imagens principais */
 
-window.addEventListener('scroll', () => {
+window.resizeBy.addEventListener('scroll', () => {
     let bg1 = document.getElementById("bg1")
     let bg2 = document.getElementById("bg2")
     let bgwave = document.querySelector('main')
@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
     bg2.style.left = value * -0.8 + 'px';
     bgwave.style.backgroundPositionX = value * 0.8 + 'px';
 
-})
+}).trigger("resize")
 
 /* Barra lateral */
 
